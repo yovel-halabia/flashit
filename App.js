@@ -1,5 +1,5 @@
-import {Text, View, StyleSheet} from "react-native";
 import {useFonts} from "expo-font";
+import Navigator from "./Navigator";
 
 export default function App() {
 	const [fontsLoaded] = useFonts({
@@ -9,22 +9,5 @@ export default function App() {
 		icomoon: require("./assets/fonts/icomoon.ttf"),
 	});
 
-	return (
-		<>
-			{fontsLoaded && (
-				<View>
-					<Text style={styles.title}>Flashit</Text>
-				</View>
-			)}
-		</>
-	);
+	return <>{fontsLoaded && <Navigator />}</>;
 }
-
-const styles = StyleSheet.create({
-	title: {
-		fontSize: 24,
-		textAlign: "center",
-		padding: 50,
-		fontFamily: "Poppins-Regular",
-	},
-});
