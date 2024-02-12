@@ -51,8 +51,9 @@ function BottomTab() {
 			}}
 			initialRouteName="Dashboard"
 		>
-			{tabs.map(({name, component, icon}) => (
+			{tabs.map(({name, component, icon}, index) => (
 				<Tab.Screen
+					key={index}
 					name={name}
 					component={component}
 					options={{
