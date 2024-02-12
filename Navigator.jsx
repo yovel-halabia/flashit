@@ -3,7 +3,7 @@ import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {NavigationContainer} from "@react-navigation/native";
 import {BOLDYELLOW} from "./styles";
 import {CustomIcon} from "./components";
-import {Dashboard, Decks, Learn, Settings} from "./screens";
+import {Dashboard, Decks, Learn, Settings, Login} from "./screens";
 
 const Tab = createBottomTabNavigator();
 
@@ -69,7 +69,8 @@ const Stack = createStackNavigator();
 export default function Navigator() {
 	return (
 		<NavigationContainer>
-			<Stack.Navigator screenOptions={{headerShown: false}}>
+			<Stack.Navigator initialRouteName="Login" screenOptions={{headerShown: false}}>
+				<Stack.Screen name="Login" component={Login} />
 				<Stack.Screen name="Home" component={BottomTab} />
 			</Stack.Navigator>
 		</NavigationContainer>
