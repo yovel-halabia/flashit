@@ -1,20 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {Text, View, StyleSheet} from "react-native";
+import {useFonts} from "expo-font";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+	const [fontsLoaded] = useFonts({
+		"Poppins-Regular": require("./assets/fonts/Poppins-Regular.ttf"),
+		"Poppins-Bold": require("./assets/fonts/Poppins-Bold.ttf"),
+		"Poppins-Light": require("./assets/fonts/Poppins-Light.ttf"),
+		icomoon: require("./assets/fonts/icomoon.ttf"),
+	});
+
+	return (
+		<>
+			{fontsLoaded && (
+				<View>
+					<Text style={styles.title}>Flashit</Text>
+				</View>
+			)}
+		</>
+	);
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+	title: {
+		fontSize: 24,
+		textAlign: "center",
+		padding: 50,
+		fontFamily: "Poppins-Regular",
+	},
 });
