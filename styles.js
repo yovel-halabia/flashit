@@ -13,4 +13,19 @@ export const components = StyleSheet.create({
 		paddingHorizontal: 20,
 		paddingTop: (Constants.statusBarHeight || 0) + 20,
 	},
+	screenTitle: {
+		fontSize: 24,
+		fontFamily: "Poppins-Regular",
+	},
+	card: {
+		width: "100%",
+		height: "100%",
+		borderRadius: 15,
+		backgroundColor: "white",
+		shadowColor: "#31208a",
+		shadowOffset: {width: 0, height: 8},
+		shadowOpacity: 0.05,
+		shadowRadius: 40,
+		elevation: 3,
+	},
 });
