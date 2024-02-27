@@ -17,6 +17,11 @@ export const components = StyleSheet.create({
 		fontSize: 24,
 		fontFamily: "Poppins-Regular",
 	},
+	headerLayout: {
+		flexDirection: "row",
+		justifyContent: "space-between",
+		alignItems: "center",
+	},
 	card: {
 		width: "100%",
 		height: "100%",
