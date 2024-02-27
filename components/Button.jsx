@@ -1,11 +1,11 @@
 import {Pressable, Text, StyleSheet} from "react-native";
 import {YELLOW} from "../styles";
 
-export default function Button({label, Icon, onPress, primary, customTheme}) {
+export default function Button({label, icon, onPress, primary, customTheme}) {
 	return (
 		<Pressable onPress={onPress} style={primary ? styles.primaryButton : customTheme ? customTheme.button : {}}>
 			{label && <Text style={[styles.text, primary ? styles.primaryText : customTheme ? customTheme.text : {}]}>{label}</Text>}
-			{Icon && <Icon />}
+			{icon && icon}
 		</Pressable>
 	);
 }
