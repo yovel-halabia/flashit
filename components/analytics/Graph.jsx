@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
 		gap: 20,
 	},
 	label: {
-		fontFamily: "Poppins-regular",
+		fontFamily: "Poppins-Regular",
 		color: BOLDGRAY,
 		textAlign: "center",
 	},
