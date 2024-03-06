@@ -12,7 +12,7 @@ export default function Decks({navigation}) {
 			<View style={components.headerLayout}>
 				<Text style={components.screenTitle}>Decks</Text>
 				<Button
-					onPress={() => bottomSheetRef.current.open()}
+					onPress={() => bottomSheetRef.current.showBottomSheet()}
 					icon={<CustomIcon name="add" color="white" size={30} />}
 					customTheme={{button: styles.button}}
 				/>
